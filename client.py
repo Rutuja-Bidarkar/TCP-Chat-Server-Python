@@ -2,8 +2,11 @@ import socket
 import threading
 import sys
 
+HOST = "web-production-57ef93.up.railway.app"
+PORT = 4000  
+
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client.connect(('127.0.0.1', 4000))
+client.connect((HOST, PORT))
 
 def receive():
     while True:
